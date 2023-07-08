@@ -41,8 +41,7 @@ def get_sun_times(cityname, country, filename):
             writer.writerow([i,sunrise,sunset])
 
 def main():
-    config_name = helper.get_config_filename()
-    city, country = helper.get_config(config_name)
+    city, country = helper.get_config()
     filename = helper.get_data_filename(city, country)
     get_sun_times(city, country, filename)
 
