@@ -1,0 +1,11 @@
+altgraph==0.17.3
+astral==3.2
+cffi==1.15.1
+geographiclib==2.0
+geopy==2.3.0
+h3==3.7.6
+numpy==1.25.0
+pycparser==2.21
+pyinstaller==5.13.0
+pyinstaller-hooks-contrib==2023.5
+timezonefinder==6.2.0
