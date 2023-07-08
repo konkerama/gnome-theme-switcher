@@ -18,7 +18,7 @@ copy_config:
 setup_logging:
 	sudo touch /var/log/gnome-theme-switcher.log
 	sudo chown ${USERNAME}:${USERNAME} /var/log/gnome-theme-switcher.log
-	chmod 755 /var/log/gnome-theme-switcher.log
+	chmod 666 /var/log/gnome-theme-switcher.log
 
 cron:
 	envsubst < src/cron-gnome-theme-switcher.sh > dist/cron-gnome-theme-switcher
