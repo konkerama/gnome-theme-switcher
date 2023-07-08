@@ -22,6 +22,12 @@ clone repository locally and run:
 make 
 ```
 
+copy your local config to the desired directory by running:
+
+``` bash
+make copy_config
+```
+
 #### Cleanup 
 To cleanup do:
 

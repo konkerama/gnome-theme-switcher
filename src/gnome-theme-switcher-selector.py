@@ -5,10 +5,8 @@ import setup
 import helper
 import logging
 import sys
-import subprocess
 
-
-logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(name)-12s %(levelname)-8s %(filename)s:%(funcName)s %(message)s", filename="/var/log/ubuntu-theme-switcher/log.log")
+logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(name)-12s %(levelname)-8s %(filename)s:%(funcName)s %(message)s", filename="/var/log/gnome-theme-switcher.log")
 
 logFormatter = logging.Formatter("[%(asctime)s] %(name)-12s %(levelname)-8s %(filename)s:%(funcName)s %(message)s")
 

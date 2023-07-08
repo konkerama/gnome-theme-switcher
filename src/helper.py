@@ -4,7 +4,7 @@ import os
 import logging
 import sys
 
-logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(name)-12s %(levelname)-8s %(filename)s:%(funcName)s %(message)s", filename="/var/log/ubuntu-theme-switcher/log.log")
+logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(name)-12s %(levelname)-8s %(filename)s:%(funcName)s %(message)s", filename="/var/log/gnome-theme-switcher.log")
 logFormatter = logging.Formatter("[%(asctime)s] %(name)-12s %(levelname)-8s %(filename)s:%(funcName)s %(message)s")
 logger = logging.getLogger('werkzeug')
 logger.setLevel(logging.INFO)
@@ -12,7 +12,7 @@ consoleHandler = logging.StreamHandler(sys.stdout) #set streamhandler to stdout
 consoleHandler.setFormatter(logFormatter)
 
 HOME = os.getenv("HOME")
-BASEPATH = f"{HOME}/.config/ubuntu-theme-switcher"
+BASEPATH = f"{HOME}/.config/gnome-theme-switcher"
 DATAPATH = f"{BASEPATH}/data"
 CONFIG_NAME = f"{BASEPATH}/config.ini"
 
@@ -58,10 +58,6 @@ def get_theme_config():
     config.read(CONFIG_NAME)
     light_theme = config["Theme"]["light_theme"]
     dark_theme = config["Theme"]["dark_theme"]
-    if "force_theme" in config["Theme"]:
-        print (config["Theme"]["force_theme"])
-    else:
-        print ("no force")
     return light_theme, dark_theme
 
 
