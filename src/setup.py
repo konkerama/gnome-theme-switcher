@@ -25,7 +25,7 @@ def get_sun_times(cityname, country, filename):
     tf = TimezoneFinder()
     timezone = tf.timezone_at(lng=coords.longitude, lat=coords.latitude)
     logger.info(timezone)
-    city = LocationInfo(cityname, country, timezone, coords.longitude, coords.latitude)
+    city = LocationInfo(cityname, country, timezone, coords.latitude, coords.longitude)
 
     header = ['month', 'sunrise', 'sunset']
 
